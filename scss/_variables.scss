@@ -1,0 +1,9 @@
+$grid-breakpoints: (
+    'small': 420px,
+    'medium': 768px,
+    'large': 1024px,
+    'huge': 1600px,
+) !default;
+
+$grid-gutter: 32px !default;
+$grid-columns: 12 !default;

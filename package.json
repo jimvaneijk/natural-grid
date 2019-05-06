@@ -1,28 +1,43 @@
 {
-  "name": "natural-grid",
-  "version": "0.1.0",
-  "description": "Simple scss grid. fully editable.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jimvaneijk/natural-grid.git"
-  },
-  "keywords": [
-    "frontend",
-    "grid",
-    "grids",
-    "only",
-    "grid",
-    "scss",
-    "sass"
-  ],
-  "author": "Jim van Eijk",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jimvaneijk/natural-grid/issues"
-  },
-  "homepage": "https://github.com/jimvaneijk/natural-grid#readme"
+    "name": "natural-grid",
+    "version": "0.1.0",
+    "description": "Simple scss grid. fully editable.",
+    "main": "webpack.mix.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jimvaneijk/natural-grid.git"
+    },
+    "keywords": [
+        "frontend",
+        "grid",
+        "grids",
+        "only",
+        "grid",
+        "scss",
+        "sass",
+        "flex-box",
+        "flex",
+        "grid system"
+    ],
+    "author": "Jim van Eijk",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jimvaneijk/natural-grid/issues"
+    },
+    "homepage": "https://github.com/jimvaneijk/natural-grid#readme",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "cross-env": "^5.1.6",
+        "laravel-mix": "^4.0.15",
+        "resolve-url-loader": "2.3.1",
+        "sass": "^1.20.1",
+        "sass-loader": "7.*"
+    }
 }

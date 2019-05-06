@@ -1,0 +1,36 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -($grid-gutter / 2);
+    margin-left: -($grid-gutter / 2);
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        flex: 0 0 (100% / ($grid-columns / $i));
+        max-width: (100% / ($grid-columns  / $i));
+    }
+}
+
+@each $breakpoint, $size in $grid-breakpoints {
+    @media screen and (min-width: ($size - 1)) {
+        @for $i from 1 through $grid-columns {
+            .col-#{$breakpoint}-#{$i} {
+                flex: 0 0 (100% / ($grid-columns / $i));
+                max-width: (100% / ($grid-columns  / $i));
+            }
+        }
+    }
+}
+
+@each $breakpoint, $size in $grid-breakpoints {
+    @for $i from 1 through $grid-columns {
+        .col-#{$breakpoint}-#{$i} {
+            position: relative;
+            width: 100%;
+            padding: 0 ($grid-gutter / 2);
+        }
+    }
+}
+
+
