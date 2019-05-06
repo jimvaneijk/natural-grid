@@ -14,7 +14,7 @@ $ npm i natural-grid --save
 Import in your own project
 
 ``` 
-@import '~/natural-grid/scss/natural-grid'
+@import '~natural-grid/scss/natural-grid'
 ```
 
 ### CDN load
