@@ -1,0 +1,28 @@
+{
+  "name": "natural-grid",
+  "version": "0.1.0",
+  "description": "Simple scss grid. fully editable.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimvaneijk/natural-grid.git"
+  },
+  "keywords": [
+    "frontend",
+    "grid",
+    "grids",
+    "only",
+    "grid",
+    "scss",
+    "sass"
+  ],
+  "author": "Jim van Eijk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimvaneijk/natural-grid/issues"
+  },
+  "homepage": "https://github.com/jimvaneijk/natural-grid#readme"
+}
