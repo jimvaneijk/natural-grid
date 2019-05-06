@@ -1,4 +1,4 @@
-#Natural Grid
+# Natural Grid
 
 Natural grid is a fully editable, simple, flex-box grids system written in scss.
 
