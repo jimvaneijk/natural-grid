@@ -1,6 +1,6 @@
 {
     "name": "natural-grid",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simple scss grid. fully editable.",
     "main": "webpack.mix.js",
     "repository": {
