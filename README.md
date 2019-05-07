@@ -1,4 +1,4 @@
-#Natural Grid
+# Natural Grid
 
 Natural grid is a fully editable, simple, flex-box grids system written in scss.
 
@@ -14,7 +14,7 @@ $ npm i natural-grid --save
 Import in your own project
 
 ``` 
-@import '~/natural-grid/scss/natural-grid'
+@import '~natural-grid/scss/natural-grid'
 ```
 
 ### CDN load
