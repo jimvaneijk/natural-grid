@@ -1,0 +1,5 @@
+@each $breakpoint, $size in $font-sizes {
+    .typo-#{$breakpoint} {
+        font-size: $size;
+    }
+}

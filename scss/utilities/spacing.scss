@@ -1,0 +1,52 @@
+@each $prop, $abbrev in (margin: m, padding: p) {
+    @each $dir, $dir_short in (top: t, right: r, bottom: b, left: l) {
+        @each $size, $length in $spacers {
+            .#{$abbrev}#{$dir_short}-#{$size} {
+                #{$prop}-#{$dir}: $length;
+            }
+        }
+        @each $breakpoint, $size in $grid-breakpoints {
+            @media screen and (min-width: ($size - 1)) {
+                @each $size, $length in $spacers {
+                    .#{$abbrev}#{$dir_short}-#{$breakpoint}-#{$size} {
+                        #{$prop}-#{$dir}: $length;
+                    }
+                }
+            }
+        }
+    }
+
+    @each $size, $length in $spacers {
+        .#{$abbrev}y-#{$size} {
+            #{$prop}-top: $length;
+            #{$prop}-bottom: $length;
+        }
+    }
+    @each $breakpoint, $size in $grid-breakpoints {
+        @media screen and (min-width: ($size - 1)) {
+            @each $size, $length in $spacers {
+                .#{$abbrev}y-#{$breakpoint}-#{$size} {
+                    #{$prop}-top: $length;
+                    #{$prop}-bottom: $length;
+                }
+            }
+        }
+    }
+
+    @each $size, $length in $spacers {
+        .#{$abbrev}x-#{$size} {
+            #{$prop}-right: $length;
+            #{$prop}-left: $length;
+        }
+    }
+    @each $breakpoint, $size in $grid-breakpoints {
+        @media screen and (min-width: ($size - 1)) {
+            @each $size, $length in $spacers {
+                .#{$abbrev}x-#{$breakpoint}-#{$size} {
+                    #{$prop}-right: $length;
+                    #{$prop}-left: $length;
+                }
+            }
+        }
+    }
+}
