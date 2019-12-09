@@ -1,0 +1,74 @@
+@each $display in $displays {
+    .d-#{$display} {
+        display: $display !important; // stylelint-disable-line
+    }
+}
+
+@each $breakpoint, $size in $grid-breakpoints {
+    @media screen and (min-width: ($size - 1)) {
+        @each $display in $displays {
+            .d-#{$breakpoint}-#{$display} {
+                display: $display !important; // stylelint-disable-line
+            }
+        }
+    }
+}
+
+@each $breakpoint, $size in $grid-breakpoints {
+    @each $display in $displays {
+        .d-#{$breakpoint}-#{$display} {
+            display: inherit;
+        }
+    }
+}
+
+.justify-content-start {
+    justify-content: flex-start !important; // stylelint-disable-line
+}
+.justify-content-end {
+    justify-content: flex-end !important; // stylelint-disable-line
+}
+.justify-content-center {
+    justify-content: center !important; // stylelint-disable-line
+}
+.justify-content-between {
+    justify-content: space-between !important; // stylelint-disable-line
+}
+.justify-content-around {
+    justify-content: space-around !important; // stylelint-disable-line
+}
+
+.align-items-start {
+    align-items: flex-start !important; // stylelint-disable-line
+}
+.align-items-end {
+    align-items: flex-end !important; // stylelint-disable-line
+}
+.align-items-center {
+    align-items: center !important; // stylelint-disable-line
+}
+.align-items-baseline {
+    align-items: baseline !important; // stylelint-disable-line
+}
+.align-items-stretch {
+    align-items: stretch !important; // stylelint-disable-line
+}
+
+.align-content-start {
+    align-content: flex-start !important; // stylelint-disable-line
+}
+.align-content-end {
+    align-content: flex-end !important; // stylelint-disable-line
+}
+.align-content-center {
+    align-content: center !important; // stylelint-disable-line
+}
+.align-content-between {
+    align-content: space-between !important; // stylelint-disable-line
+}
+.align-content-around {
+    align-content: space-around !important; // stylelint-disable-line
+}
+.align-content-stretch {
+    align-content: stretch !important; // stylelint-disable-line
+}
